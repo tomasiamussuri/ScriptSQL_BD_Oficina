@@ -151,9 +151,9 @@ CREATE TABLE IF NOT EXISTS `oficina`.`Pedidos` (
   `DataEntrada` DATETIME NOT NULL,
   `Clientes_idClientes` INT NOT NULL,
   `Status_idStatus` INT NOT NULL,
-  `KM_Chegada` INT NOT NULL,
-  `KM_Saida` INT NULL,
-  `ProximaRevisao` INT NULL,
+  `KM_Chegada` CHAR(5) NOT NULL,
+  `KM_Saida` CHAR(5) NULL,
+  `ProximaRevisao` CHAR(5) NULL,
   `ValorTotal` FLOAT NULL,
   `DataAprovacao` DATETIME NULL,
   `Clientes_has_Veiculos_Clientes_idClientes` INT NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `oficina`.`Pedidos` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Pedidos_Status1`
     FOREIGN KEY (`Status_idStatus`)
-    REFERENCES `mydb`.`Status` (`idStatus`)
+    REFERENCES `oficina`.`Status` (`idStatus`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Pedidos_Clientes_has_Veiculos1`
