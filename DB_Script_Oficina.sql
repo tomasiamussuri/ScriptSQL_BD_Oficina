@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `oficina`.`Clientes_has_Veiculos` (
 -- Criando tabela: STATUS
 CREATE TABLE IF NOT EXISTS `oficina`.`Status` (
   `idStatus` INT NOT NULL,
-  `Descicao` VARCHAR(45) NOT NULL,
+  `Descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idStatus`));
   
   
